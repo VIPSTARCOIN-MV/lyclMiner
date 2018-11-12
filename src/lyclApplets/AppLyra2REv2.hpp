@@ -460,8 +460,8 @@ namespace lycl
         // blake32
         clEnqueueNDRangeKernel(m_clCommandQueue, m_clKernelBlake32, 1, nullptr,
                                &globalWorkSize, &localWorkSize, 0, nullptr, nullptr);
-        // keccak-f1600
-        clEnqueueNDRangeKernel(m_clCommandQueue, m_clKernelKeccakF1600, 1, nullptr,
+        // cubeHash256
+        clEnqueueNDRangeKernel(m_clCommandQueue, m_clKernelCubeHash256, 1, nullptr,
                                &globalWorkSize, &localWorkSize, 0, nullptr, nullptr);
         // cubeHash256
         clEnqueueNDRangeKernel(m_clCommandQueue, m_clKernelCubeHash256, 1, nullptr,
@@ -478,8 +478,8 @@ namespace lycl
         // skein
         clEnqueueNDRangeKernel(m_clCommandQueue, m_clKernelSkein, 1, nullptr,
                                &globalWorkSize, &localWorkSize, 0, nullptr, nullptr);
-        // cubeHash256
-        clEnqueueNDRangeKernel(m_clCommandQueue, m_clKernelCubeHash256, 1, nullptr,
+        // keccak-f1600
+        clEnqueueNDRangeKernel(m_clCommandQueue, m_clKernelKeccakF1600, 1, nullptr,
                                &globalWorkSize, &localWorkSize, 0, nullptr, nullptr);
         // bmwHtarg
         clEnqueueNDRangeKernel(m_clCommandQueue, m_clKernelBmwHtarg, 1, nullptr,
