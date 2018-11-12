@@ -1,9 +1,10 @@
 lyclMiner
 ===============
 
-lyclMiner is a high performance OpenCL Lyra2REv2 miner for AMD GCN GPUs.
+lyclMiner is a high performance OpenCL Lyra2REvc0ban miner for AMD GCN GPUs.
 
 **Developer:** CryptoGraphics ( CrGraphics@protonmail.com )
+               yutotetuota ( yuto_tetuota@yahoo.co.jp )
 
 Stratum and WorkIO implementations are based on [cpuminer-multi](https://github.com/tpruvot/cpuminer-multi)  
 Some kernels(Skein and BMW) are based on cuda and OpenCL kernels from (ccminer and sgminer projects respectively).
