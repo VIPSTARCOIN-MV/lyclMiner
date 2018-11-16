@@ -343,7 +343,7 @@ static bool json_object_set_error(json_t *result, int code, const char *msg)
 //-----------------------------------------------------------------------------
 inline void get_currentalgo(char* buf, int sz)
 {
-    snprintf(buf, sz, "%s", "lyra2REv2");
+    snprintf(buf, sz, "%s", "Lyra2REvc0ban");
 }
 //-----------------------------------------------------------------------------
 // allow to report algo perf to the pool for algo stats
