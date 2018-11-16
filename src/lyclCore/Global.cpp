@@ -18,7 +18,7 @@ namespace global
     //! Report statistics to the pool.
     bool opt_stratumStats = false;
     //! enable terminal colors for logging
-    bool use_colors = false;
+    bool use_colors = true;
     //! network difficulty
     double net_diff = 0.;
     //! global work info
