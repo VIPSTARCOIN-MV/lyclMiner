@@ -1092,7 +1092,7 @@ int main(int argc, char** argv)
         }
     }
 
-    Log::print(Log::LT_Info, "%d worker threads started, using lyra2REv2 algorithm.", global::numWorkerThreads);
+    Log::print(Log::LT_Info, "%d worker threads started, using lyra2REvc0ban algorithm.", global::numWorkerThreads);
 
 //-----------------------------------------------------------------------------
 
