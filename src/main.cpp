@@ -409,7 +409,7 @@ void *worker_thread( void *userdata )
 int main(int argc, char** argv)
 {
     Log::print(Log::LT_Notice, "*** lyclMiner beta %s. ***", PACKAGE_VERSION);
-    Log::print(Log::LT_Notice, "Developer: CryptoGraphics ( CrGraphics@protonmail.com ).\n");
+    Log::print(Log::LT_Notice, "Developer: CryptoGraphics ( CrGraphics@protonmail.com ), yutotetuota ( yuto_tetuota@yahoo.co.jp ).\n");
 
     //-----------------------------------------------------------------------------
     // Config file management
@@ -1092,7 +1092,7 @@ int main(int argc, char** argv)
         }
     }
 
-    Log::print(Log::LT_Info, "%d worker threads started, using lyra2REvc0ban algorithm.", global::numWorkerThreads);
+    Log::print(Log::LT_Info, "%d worker threads started, using lyra2REv3 algorithm.", global::numWorkerThreads);
 
 //-----------------------------------------------------------------------------
 
