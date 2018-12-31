@@ -1,7 +1,7 @@
 lyclMiner
 ===============
 
-lyclMiner is a high performance OpenCL Lyra2REvc0ban miner for AMD GCN GPUs.
+lyclMiner is a high performance OpenCL Lyra2REv3 miner for AMD GCN GPUs.
 
 **Developer:** CryptoGraphics ( CrGraphics@protonmail.com )
                yutotetuota ( yuto_tetuota@yahoo.co.jp )
