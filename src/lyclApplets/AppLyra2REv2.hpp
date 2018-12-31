@@ -460,8 +460,14 @@ namespace lycl
         // blake32
         clEnqueueNDRangeKernel(m_clCommandQueue, m_clKernelBlake32, 1, nullptr,
                                &globalWorkSize, &localWorkSize, 0, nullptr, nullptr);
-        // cubeHash256
-        clEnqueueNDRangeKernel(m_clCommandQueue, m_clKernelCubeHash256, 1, nullptr,
+        // lyra441p1
+        clEnqueueNDRangeKernel(m_clCommandQueue, m_clKernelLyra441p1, 1, nullptr,
+                               &globalWorkSize, &localWorkSize, 0, nullptr, nullptr);
+        // lyra441p2
+        clEnqueueNDRangeKernel(m_clCommandQueue, m_clKernelLyra441p2, 1, nullptr,
+                               &globalWorkSize4x, &lyraLocalWorkSize, 0, nullptr, nullptr);
+        // lyra441p3
+        clEnqueueNDRangeKernel(m_clCommandQueue, m_clKernelLyra441p3, 1, nullptr,
                                &globalWorkSize, &localWorkSize, 0, nullptr, nullptr);
         // cubeHash256
         clEnqueueNDRangeKernel(m_clCommandQueue, m_clKernelCubeHash256, 1, nullptr,
@@ -474,12 +480,6 @@ namespace lycl
                                &globalWorkSize4x, &lyraLocalWorkSize, 0, nullptr, nullptr);
         // lyra441p3
         clEnqueueNDRangeKernel(m_clCommandQueue, m_clKernelLyra441p3, 1, nullptr,
-                               &globalWorkSize, &localWorkSize, 0, nullptr, nullptr);
-        // skein
-        clEnqueueNDRangeKernel(m_clCommandQueue, m_clKernelSkein, 1, nullptr,
-                               &globalWorkSize, &localWorkSize, 0, nullptr, nullptr);
-        // keccak-f1600
-        clEnqueueNDRangeKernel(m_clCommandQueue, m_clKernelKeccakF1600, 1, nullptr,
                                &globalWorkSize, &localWorkSize, 0, nullptr, nullptr);
         // bmwHtarg
         clEnqueueNDRangeKernel(m_clCommandQueue, m_clKernelBmwHtarg, 1, nullptr,
