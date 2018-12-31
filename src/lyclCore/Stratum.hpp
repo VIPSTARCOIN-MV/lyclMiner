@@ -33,6 +33,8 @@ struct stratum_job
     unsigned char version[4];
     unsigned char nbits[4];
     unsigned char ntime[4];
+    unsigned char stateroot[32];
+    unsigned char utxoroot[32];
     bool clean;
     double diff;
 };
@@ -209,9 +211,11 @@ static bool stratum_notify(struct stratum_ctx *sctx, json_t *params)
     version = json_string_value(json_array_get(params, p++));
     nbits = json_string_value(json_array_get(params, p++));
     stime = json_string_value(json_array_get(params, p++));
+    stateroot = json_string_value(json_array_get(params, p++));
+    utxoroot = json_string_value(json_array_get(params, p++));
     clean = json_is_true(json_array_get(params, p)); p++;
 
-    if (!job_id || !prevhash || !coinb1 || !coinb2 || !version || !nbits || !stime ||
+    if (!job_id || !prevhash || !coinb1 || !coinb2 || !version || !nbits || !stime || !stateroot || !utxoroot ||
         strlen(prevhash) != 64 || strlen(version) != 8 ||
         strlen(nbits) != 8 || strlen(stime) != 8)
     {
@@ -266,6 +270,8 @@ static bool stratum_notify(struct stratum_ctx *sctx, json_t *params)
     hex2bin(sctx->job.version, version, 4);
     hex2bin(sctx->job.nbits, nbits, 4);
     hex2bin(sctx->job.ntime, stime, 4);
+    hex2bin(sctx->job.stateroot, stateroot, 32);
+    hex2bin(sctx->job.utxoroot, utxoroot, 32);
     sctx->job.clean = clean;
 
     sctx->job.diff = sctx->next_diff;
@@ -343,7 +349,7 @@ static bool json_object_set_error(json_t *result, int code, const char *msg)
 //-----------------------------------------------------------------------------
 inline void get_currentalgo(char* buf, int sz)
 {
-    snprintf(buf, sz, "%s", "Lyra2REvc0ban");
+    snprintf(buf, sz, "%s", "Lyra2REv3");
 }
 //-----------------------------------------------------------------------------
 // allow to report algo perf to the pool for algo stats
